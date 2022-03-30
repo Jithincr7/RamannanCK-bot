@@ -406,14 +406,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('👨‍🦱 DEV', url='https://t.me/mr_MKN'),
-            InlineKeyboardButton('🤖 Support', url='https://t.me/mkn_bots_updates')
+            InlineKeyboardButton('👨‍🦱 DEV', url='https://t.me/CK_HELPER')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
+        await query.message.edit_text
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -438,7 +437,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Support', url='https://t.me/mkn_bots_updates'),
             InlineKeyboardButton('❣️ Source code', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
